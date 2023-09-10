@@ -18,10 +18,11 @@ const usersSlice = createSlice({
     });
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.isLoading = false;
-      //Receving the payload from the thunk function
+      //Receiving the payload from the thunk function
       state.data = action.payload;
     });
     builder.addCase(fetchUsers.rejected, (state, action) => {
+      state.isLoading = false;
       state.error = action.error;
     });
   },
