@@ -7,4 +7,6 @@ export const store = configureStore({
   },
 });
 
+//Exporting Thunk functions so it can be used in the react app
 export * from "./thunks/fetchUsers";
+export * from "./thunks/addUser";

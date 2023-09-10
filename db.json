@@ -1,5 +1,42 @@
 {
-    "users": [{"id": 1, "name": "Myra"}],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Renee Runolfsdottir",
+      "id": 2
+    },
+    {
+      "name": "Ebony Cartwright",
+      "id": 3
+    },
+    {
+      "name": "Dr. Patty O'Reilly III",
+      "id": 4
+    },
+    {
+      "name": "Rick Stracke",
+      "id": 5
+    },
+    {
+      "name": "Sadie Jenkins",
+      "id": 6
+    },
+    {
+      "name": "Lucille Altenwerth",
+      "id": 7
+    },
+    {
+      "name": "Freda Collins",
+      "id": 8
+    },
+    {
+      "name": "Jessie Rau III",
+      "id": 9
+    }
+  ],
+  "albums": [],
+  "photos": []
 }
