@@ -25,4 +25,5 @@ const albumsApi = createApi({
 
 //becase we add it in fetch albums specifically, we now ge access to a
 //hook called albumsApi.useFetchAlbumsquery() then we can use inside one of our components
-// albumsApi.useFetchAlbumsQuery();
+export const { useFetchAlbumsQuery } = albumsApi;
+export { albumsApi };
