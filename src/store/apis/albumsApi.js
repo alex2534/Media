@@ -1,4 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+//Faker will be used to add new data
+import { Faker, faker } from "@faker-js/faker";
 
 const albumsApi = createApi({
   reducerPath: "albums",
@@ -6,9 +8,29 @@ const albumsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "http://localhost:3005",
   }),
+  //Any time we need to tell Redux query about how to make another kind of request,
+  //we're going to add in another key inside of this ( endpoints aobject )
+  //from that function albumsApi
   endpoints(builder) {
     return {
+      //Every time we use mutation we are telling Redux we are going to change some data.
+      addAlbum: builder.mutation({
+        //The query function is to tell about some parameters to use for the request
+        query: () => {
+          return {
+            url: "/albums",
+            //What kind of request we are making
+            method: "POST",
+            //Body will contain all the data we want to add
+            body: {
+              userId: user.id,
+              title: faker.commerce.productName(),
+            },
+          };
+        },
+      }),
       fetchAlbums: builder.query({
+        //The query function is to tell about some parameters to use for the request
         query: (user) => {
           return {
             url: "/albums",
