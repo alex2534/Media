@@ -15,8 +15,12 @@ const albumsApi = createApi({
     return {
       //Every time we use mutation we are telling Redux we are going to change some data.
       addAlbum: builder.mutation({
+        //This is to invalidet a tag in another function
+        invalidatesTags: (results, error, user) => {
+          return [{ type: "Album", id: user.id }];
+        },
         //The query function is to tell about some parameters to use for the request
-        query: () => {
+        query: (user) => {
           return {
             url: "/albums",
             //What kind of request we are making
@@ -31,6 +35,10 @@ const albumsApi = createApi({
       }),
       fetchAlbums: builder.query({
         //The query function is to tell about some parameters to use for the request
+        //This tag is to be used when a query mutation happens
+        providesTags: (results, error, user) => {
+          return [{ type: "Album", id: user.id }];
+        },
         query: (user) => {
           return {
             url: "/albums",

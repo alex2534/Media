@@ -1,4 +1,5 @@
-import { useFetchAlbumsQuery } from "../store";
+//Importing all Redux Query from inside of the store/inde.js file
+import { useFetchAlbumsQuery, useAddAlbumMutation } from "../store";
 //This imports is to use with the useFetchAlbumsQuery
 import Skeleton from "./Skeleton";
 import ExpandablePanel from "./ExpendablePanel";
@@ -7,6 +8,13 @@ import Button from "./Button";
 function AlbumsList({ user }) {
   //distructoring the useFetchAlbumsQuery in here (data error and isLoading)
   const { data, error, isLoading } = useFetchAlbumsQuery(user);
+
+  const [addAlbum, results] = useAddAlbumMutation();
+
+  const handleAddAlbum = () => {
+    //The user here is the user we want to tie the album to
+    addAlbum(user);
+  };
 
   let content;
 
@@ -30,7 +38,10 @@ function AlbumsList({ user }) {
 
   return (
     <div>
-      <div>Albums for {user.name}</div>
+      <div>
+        Albums for {user.name}
+        <Button onClick={handleAddAlbum}> + Add Album</Button>
+      </div>
       <div>{content}</div>
     </div>
   );

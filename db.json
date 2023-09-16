@@ -18,6 +18,31 @@
       "id": 10,
       "title": "Hiking Trip",
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Ergonomic Metal Chair",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "title": "Oriental Rubber Chicken",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "title": "Generic Fresh Cheese",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "title": "Gorgeous Concrete Chips",
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "title": "Fantastic Wooden Salad",
+      "id": 15
     }
   ],
   "photos": []
