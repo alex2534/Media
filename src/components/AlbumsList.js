@@ -7,7 +7,7 @@ import AlbumsListItem from "./AlbumsListItem";
 
 function AlbumsList({ user }) {
   //distructoring the useFetchAlbumsQuery in here (data error and isLoading)
-  const { data, error, isLoading } = useFetchAlbumsQuery(user);
+  const { data, error, isFetching } = useFetchAlbumsQuery(user);
 
   const [addAlbum, results] = useAddAlbumMutation();
 
@@ -18,7 +18,7 @@ function AlbumsList({ user }) {
 
   let content;
 
-  if (isLoading === true) {
+  if (isFetching === true) {
     //When useing the sketon we have to pass a props called times, it is to show how many lines of the skeleton
     content = <Skeleton className="h-10 w-full" times={3} />;
   } else if (error) {

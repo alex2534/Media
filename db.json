@@ -16,16 +16,6 @@
   "albums": [
     {
       "userId": 1,
-      "title": "Oriental Rubber Chicken",
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "title": "Generic Fresh Cheese",
-      "id": 13
-    },
-    {
-      "userId": 1,
       "title": "Gorgeous Concrete Chips",
       "id": 14
     },
@@ -36,11 +26,6 @@
     },
     {
       "userId": 1,
-      "title": "Elegant Plastic Chair",
-      "id": 16
-    },
-    {
-      "userId": 1,
       "title": "Bespoke Granite Chair",
       "id": 17
     },
@@ -48,6 +33,51 @@
       "userId": 1,
       "title": "Bespoke Plastic Gloves",
       "id": 18
+    },
+    {
+      "userId": 10,
+      "title": "Practical Metal Hat",
+      "id": 19
+    },
+    {
+      "userId": 10,
+      "title": "Practical Fresh Pizza",
+      "id": 20
+    },
+    {
+      "userId": 9,
+      "title": "Ergonomic Plastic Computer",
+      "id": 21
+    },
+    {
+      "userId": 9,
+      "title": "Tasty Bronze Fish",
+      "id": 22
+    },
+    {
+      "userId": 9,
+      "title": "Bespoke Rubber Sausages",
+      "id": 23
+    },
+    {
+      "userId": 10,
+      "title": "Oriental Frozen Tuna",
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "title": "Luxurious Metal Hat",
+      "id": 25
+    },
+    {
+      "userId": 9,
+      "title": "Elegant Soft Sausages",
+      "id": 26
+    },
+    {
+      "userId": 10,
+      "title": "Luxurious Wooden Towels",
+      "id": 27
     }
   ],
   "photos": []

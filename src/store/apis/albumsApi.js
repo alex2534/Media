@@ -26,6 +26,10 @@ const albumsApi = createApi({
   endpoints(builder) {
     return {
       removeAlbum: builder.mutation({
+        //This will call the fetchQuery whenever we remove an album/or a user
+        invalidatesTags: (result, error, album) => {
+          return [{ type: "Album", id: album.id }];
+        },
         //our parmeter will be album so we can get the id of the album to remove it
         query: (album) => {
           return {
@@ -37,9 +41,9 @@ const albumsApi = createApi({
 
       //Every time we use mutation we are telling Redux we are going to change some data.
       addAlbum: builder.mutation({
-        //This is to invalidet a tag in another function
-        invalidatesTags: (results, error, user) => {
-          return [{ type: "Album", id: user.id }];
+        //This is to invalidet a tag in a fetchQuery to update the view
+        invalidatesTags: (result, error, user) => {
+          return [{ type: "UsersAlbums", id: user.id }];
         },
         //The query function is to tell about some parameters to use for the request
         query: (user) => {
@@ -58,8 +62,13 @@ const albumsApi = createApi({
       fetchAlbums: builder.query({
         //The query function is to tell about some parameters to use for the request
         //This tag is to be used when a query mutation happens
-        providesTags: (results, error, user) => {
-          return [{ type: "Album", id: user.id }];
+        providesTags: (result, error, user) => {
+          const tags = result.map((album) => {
+            //With this album.id we can call this query when we delete/or add  a album
+            return { type: "Album", id: album.id };
+          });
+          tags.push({ type: "UsersAlbums", id: user.id });
+          return tags;
         },
         query: (user) => {
           return {
