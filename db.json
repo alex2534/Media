@@ -53,32 +53,13 @@
       "userId": 9,
       "title": "Tasty Bronze Fish",
       "id": 22
-    },
-    {
-      "userId": 9,
-      "title": "Bespoke Rubber Sausages",
-      "id": 23
-    },
-    {
-      "userId": 10,
-      "title": "Oriental Frozen Tuna",
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "title": "Luxurious Metal Hat",
-      "id": 25
-    },
-    {
-      "userId": 9,
-      "title": "Elegant Soft Sausages",
-      "id": 26
-    },
-    {
-      "userId": 10,
-      "title": "Luxurious Wooden Towels",
-      "id": 27
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 14,
+      "url": "https://loremflickr.com/640/480?lock=8451811971170304",
+      "id": 1
+    }
+  ]
 }

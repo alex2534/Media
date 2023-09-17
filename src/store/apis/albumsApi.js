@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 //Faker will be used to add new data
-import { Faker, faker } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 
 //DEV ONLY !!!
 const pause = (duration) => {
