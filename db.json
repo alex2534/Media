@@ -15,16 +15,6 @@
   ],
   "albums": [
     {
-      "id": 10,
-      "title": "Hiking Trip",
-      "userId": 1
-    },
-    {
-      "userId": 1,
-      "title": "Ergonomic Metal Chair",
-      "id": 11
-    },
-    {
       "userId": 1,
       "title": "Oriental Rubber Chicken",
       "id": 12
@@ -43,6 +33,21 @@
       "userId": 1,
       "title": "Fantastic Wooden Salad",
       "id": 15
+    },
+    {
+      "userId": 1,
+      "title": "Elegant Plastic Chair",
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "title": "Bespoke Granite Chair",
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "title": "Bespoke Plastic Gloves",
+      "id": 18
     }
   ],
   "photos": []
